@@ -1,0 +1,453 @@
+/* General App Styling */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #f9fafb;
+  padding: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: #34495e;
+  font-size: 1.8rem;
+  margin: 20px 0 10px;
+  font-weight: 500;
+}
+
+/* Card Styling for Main Content */
+.converter-card {
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Format Buttons Layout */
+.format-fieldset {
+  display: flex;
+  flex-direction: column; /* Keep the legend above */
+  align-items: center; /* Center align the buttons */
+}
+
+.format-links {
+  display: flex; /* Align buttons in a row */
+  flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+  justify-content: center; /* Center buttons horizontally */
+  margin-top: 10px; /* Space between the legend and buttons */
+}
+
+.format-links button {
+  margin: 5px; /* Space between buttons */
+  flex: 1 0 120px; /* Allow buttons to grow and shrink, min width of 120px */
+}
+
+/* Input and Button Styling */
+input[type="file"] {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+input[type="file"]:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+select {
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  color: #34495e;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+select:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #3498db;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Image Display Styling */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Download Button Link Styling */
+a button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+a button:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+a button:active {
+  transform: translateY(1px);
+}
+
+/* Container for Images */
+.image-container {
+  display: flex;
+  justify-content: space-between; /* Align original and converted images side by side */
+  margin-top: 20px;
+  width: 100%; /* Ensure full width */
+}
+
+.original-images,
+.converted-images {
+  width: 48%; /* Adjust width to fit side by side */
+}
+
+.image-item {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-preview {
+  display: flex;
+  flex-direction: column; /* Align images in a column */
+}
+
+/* Subtle Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.converter-card,
+.image-container img,
+a button {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Adjust spacing for buttons in image items */
+.image-item {
+  margin-right: 10px; /* Space between images */
+}
+
+/* X Button Styling */
+.image-item button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.ad-space {
+  width: 20%; /* Adjust this value based on your ad size */
+  background-color: #e0e0e0; /* Placeholder color for ad space */
+  margin: 0 10px; /* Space between content and ads */
+}
+
+.main-content {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.output-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.output-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.output-button:hover {
+  background-color: #0056b3;
+}
+
+#file-upload {
+  margin: 20px 0;
+}
+
+.image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.remove-image {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-image:hover {
+  background-color: #c82333;
+}
+.feature-container {
+  display: flex; /* Flexbox layout for features */
+  justify-content: space-between; /* Distribute space evenly between features */
+  align-items: flex-start; /* Align items to the start vertically */
+}
+.feature-container {
+  display: flex; /* Flexbox layout for features */
+  flex-direction: column; /* Stack feature rows vertically */
+  align-items: center; /* Center align items */
+}
+
+.feature-row {
+  display: flex; /* Flexbox layout for the first two features */
+  justify-content: space-between; /* Space out the two features */
+  width: 100%; /* Ensure full width */
+}
+
+.feature {
+  flex: 1; /* Each feature will grow equally */
+  background-color: wheat; 
+  padding: 10px;
+  border: none; 
+  margin: 10px; /* Space between features */
+  border-radius: 10px;
+  width: 300px; /* Set width to just under half */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+  transition: transform 0.2s; /* Smooth scaling effect on hover */
+}
+
+.feature:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.feature img {
+  width: 50px; /* Set the image width to small */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Block display for proper spacing */
+  margin: 0 auto 10px; /* Center the image and add space below */
+}
+/* File upload styling */
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  height: 50px;
+  padding-top: -5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.custom-file-upload:hover {
+  background-color: #2980b9;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none; /* Hide actual file input */
+}
+
+/* Output format select styling */
+.output-select {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  color: #34495e;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.output-select:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 600px) {
+  /* Mobile */
+  .App {
+    padding: 20px 0 20px 600px;  /* Add 50px padding on the left */
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  .converter-card {
+    padding: 20px;
+  }
+  
+  .format-links button {
+    flex: 1 0 100px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Tablet */
+  .App {
+    padding: 20px 0 20px 200px;  /* Add 50px padding on the left */
+    
+  }
+  
+  h1 {
+    font-size: 2.4rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  .converter-card {
+    padding: 25px;
+    max-width: 700px;
+  }
+  
+  .format-links button {
+    flex: 1 0 120px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Laptop */
+  .App {
+    padding: 30px;
+  }
+  
+  h1 {
+    font-size: 2.6rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .converter-card {
+    padding: 30px;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1441px) {
+  /* Desktop and Larger Screens */
+  .App {
+    padding: 40px;
+  }
+  
+  .converter-card {
+    padding: 40px;
+    max-width: 1000px;
+  }
+}

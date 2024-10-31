@@ -1,0 +1,84 @@
+/* Header.css */
+.header {
+    background-color: #4CAF50; /* Header background color */
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0;
+  }
+  
+  .header-content {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center content */
+  }
+  
+  .logo {
+    width: 100px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the logo */
+  }
+  
+  h1 {
+    font-size: 2.5em; /* Header title size */
+    margin: 0; /* Remove default margin */
+  }
+  
+  p {
+    font-size: 1.2em; /* Description size */
+    margin: 5px 0 0; /* Spacing for description */
+  }
+  
+  /* Responsive Design */
+  
+  /* Mobile (up to 600px) */
+  @media (max-width: 600px) {
+    .header-content {
+      width: 50%; /* Half screen width */
+      margin-right: 100px; /* Center the content horizontally */
+      text-align: center; /* Center the text inside */
+    }
+  
+    .logo {
+      width: 70px;
+    }
+    
+    h1 {
+      font-size: 1.8em; /* Smaller header title */
+    }
+    
+    p {
+      font-size: 1em; /* Smaller description text */
+      padding: 0 10px; /* Add padding for readability */
+    }
+  }
+  
+  
+  /* Tablet (601px - 1024px) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .logo {
+      width: 80px; /* Medium logo size for tablets */
+    }
+  
+    h1 {
+      font-size: 2.2em; /* Medium header title */
+    }
+  
+    p {
+      font-size: 1.1em; /* Medium description text */
+    }
+  }
+  
+  /* Laptop/Desktop (1025px and up) */
+  @media (min-width: 1025px) {
+    .logo {
+      width: 100px; /* Original logo size */
+    }
+  
+    h1 {
+      font-size: 2.5em; /* Original header title size */
+    }
+  
+    p {
+      font-size: 1.2em; /* Original description size */
+    }
+  }
+  
